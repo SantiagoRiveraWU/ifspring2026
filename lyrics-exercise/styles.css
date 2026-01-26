@@ -1,0 +1,49 @@
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.lyrics {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 20pt;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+
+h2 {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #444444; 
+  text-decoration: underline;
+  margin-bottom: 24px;
+}
+h2 a {
+  color: #444444; 
+  text-decoration: underline;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 14pt;
+  margin: 4px 0;
+  text-indent: 10px;
+}
+
+.bracketed {
+  text-indent: 5px;
+}
+
+
+.verse {
+  margin-bottom: 20px;
+}

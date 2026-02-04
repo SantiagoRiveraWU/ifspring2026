@@ -1,0 +1,114 @@
+/* Base document styles */
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.5;
+  background-color: #f3f6f9;
+  color: #000;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+/* Headings */
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Base paragraph style */
+p {
+  font-size: 15pt;
+  margin: 10px 0 4px 0;
+  color: slategray
+}
+
+/* Test sentence style */
+h3 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+/* Horizontal divider -- Used online resources for this one*/
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+/* FONT WEIGHTS */
+.weight-300 { font-weight: 300; }
+.weight-500 { font-weight: 500; }
+.weight-700 { font-weight: 700; }
+
+/* FONT STYLES */
+.italic {
+  font-style: italic;
+}
+
+.regular {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* LETTER SPACING */
+.ls-tight {
+  letter-spacing: -0.05em;
+}
+
+.ls-normal {
+  letter-spacing: 0;
+}
+
+.ls-wide {
+  letter-spacing: 0.5em;
+}
+
+/* TEXT TRANSFORM */
+.tt-none {
+  text-transform: none;
+}
+
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
+.tt-lowercase {
+  text-transform: lowercase;
+}
+
+.tt-smallcaps {
+  font-variant: small-caps;
+}
+
+/* TEXT DECORATION */
+.td-none {
+  text-decoration: none;
+}
+
+.td-underline {
+  text-decoration: underline;
+}
+
+.td-throughline {
+  text-decoration: line-through;
+}
+
+.td-overline {
+  text-decoration: overline;
+}

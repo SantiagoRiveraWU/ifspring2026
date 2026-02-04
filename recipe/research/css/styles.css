@@ -1,0 +1,129 @@
+ 
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 16pt;
+      line-height: 1.5;
+      background-color: #faf7f3;
+      color: #222;
+    }
+    header {
+      background: #f95118;
+      color: #fff;
+      padding: 1.5rem 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      max-width: 55rem;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e2d4c4;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      color: #b0381b;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+    }
+    ul, ol {
+      margin: 0.5rem 0 0.5rem 1.5rem;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    a {
+      color: #b0381b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .source {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .image-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .image-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+    .image-card p {
+      margin: 0;
+      padding: 0.5rem 0.75rem 0.75rem;
+      font-size: 0.9em;
+    }
+    .link-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .link-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .link-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+    }
+    .link-card p {
+      margin: 0.35rem 0 0;
+      font-size: 0.95em;
+    }
+    code {
+      font-family: "Ubuntu Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9em;
+      background: #f0ebe6;
+      padding: 0 0.2em;
+      border-radius: 3px;
+    }
+    @media (max-width: 600px) {
+      header, main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }

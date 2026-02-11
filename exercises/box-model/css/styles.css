@@ -1,0 +1,34 @@
+/* Box layers demo */
+.box-layers {
+  background-color: #eeeeee;
+  /* final padding shorthand with four values */
+  padding: 2rem 1rem 4rem 1rem;
+  /* border only on the top, per later instruction */
+  border-top: 10px solid #dddddd;
+  /* vertical margin only */
+  margin: 4rem 0;
+}
+
+/* Margin-collapse demo: add a border to stop the h2's margin from spilling out */
+.h2-wrapper {
+  border: 1px solid black;
+}
+
+/* Box-sizing demo */
+.box-sizing-example {
+  background-color: #eeeeee;
+  padding: 2rem;
+  border: 10px solid #dddddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Overflow demo */
+.overflow-example {
+  width: 50%;
+  height: 300px;
+  overflow: auto;   /* last step: scrolling container */
+  background-color: #eeeeee;
+  padding: 1rem;
+  border: 1px solid #dddddd;
+}

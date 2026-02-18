@@ -1,0 +1,10 @@
+/* Float the portrait image to the left */
+.portrait {
+  float: left;
+  margin: 0 2rem 2rem 0; /* top right bottom left */
+}
+
+/* Ensure instructions lists clear floated elements */
+.instructions {
+  clear: both;
+}

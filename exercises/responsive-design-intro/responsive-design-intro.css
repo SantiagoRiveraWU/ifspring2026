@@ -1,0 +1,33 @@
+/* Make all images scale with their parent container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Center the page content and manage responsive width/limits */
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 40rem;
+}
+
+/* Base font size and media query example */
+html {
+  font-size: 12pt;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 16pt;
+  }
+
+  /* Two-column flex layout example at 640px and wider */
+  .two-columns-example {
+    display: flex;
+  }
+
+  .two-columns-example > * {
+    width: 50%;
+  }
+}

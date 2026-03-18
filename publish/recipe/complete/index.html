@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cochinita Pibil Recipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- ═══ STICKY HEADER ═══ -->
+  <header id="site-header">
+    <div class="header-title">Cochinita Pibil Recipe</div>
+    <div id="header-right">
+      <button id="print-btn">Print View</button>
+      <button id="menu-btn" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ NAV DRAWER ═══ -->
+  <nav id="nav-drawer" aria-label="Jump to section">
+    <a href="#section-title"     onclick="closeMenu()">Introduction</a>
+    <a href="#section-equipment" onclick="closeMenu(); openSection('section-equipment')">Equipment</a>
+    <a href="#section-prep"      onclick="closeMenu(); openSection('section-prep')">Prep</a>
+    <a href="#section-ing"       onclick="closeMenu(); openSection('section-ing')">Ingredients</a>
+    <a href="#section-instr"     onclick="closeMenu(); openSection('section-instr')">Instructions</a>
+    <a href="#section-origin"    onclick="closeMenu(); openSection('section-origin')">About This Dish</a>
+    <a href="#section-other"     onclick="closeMenu(); openSection('section-other')">Other Recipes</a>
+  </nav>
+
+  <!-- ═══ PAGE ═══ -->
+  <div id="page-wrapper">
+    <div id="recipe-paper">
+
+      <!-- ── 1. TITLE SECTION ── -->
+      <section id="section-title">
+        <div class="title-grid">
+          <div class="hero-img-wrap">
+            <img src="https://thenovicechefblog.com/wp-content/uploads/2022/08/Instant-Pot-Cochinita-Pibil-13.jpeg" alt="Cochinita pibil tacos with pickled red onions on top" />
+          </div>
+          <div class="title-text">
+            <div class="recipe-label">Yucatán · Mexico</div>
+            <h1 class="page-title">Cochinita Pibil<br>(Yucatán-Style Pulled Pork)</h1>
+            <p class="intro">A slow-roasted pork dish marinated in sour orange and achiote, then wrapped in banana leaves until spoon-tender and deeply stained red. Tangy, aromatic, built for warm tortillas with sharp onions and lime.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── META BAR ── -->
+      <div id="meta-bar">
+        <div class="meta-cell">
+          <span class="meta-label">Total Time</span>
+          <span class="meta-value">5–7 hours</span>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Prep</span>
+          <span class="meta-value">~30 min</span>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Cook</span>
+          <span class="meta-value">2½–3 hrs at 325–350°F</span>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Rating</span>
+          <span class="meta-value"><span class="stars">★★★★¾</span>&ensp;4.75 / 5</span>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Servings</span>
+          <span class="meta-value">6–8</span>
+        </div>
+      </div>
+
+      <!-- ── 2. EQUIPMENT ── -->
+      <div class="recipe-section" id="section-equipment">
+        <div class="section-header" role="button" tabindex="0" aria-expanded="false"
+             onclick="toggleSection(this)" onkeydown="keyToggle(event,this)">
+          <h2>Equipment Needed</h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="section-body">
+          <div class="section-inner">
+            <ul class="equip-list">
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq1">
+                  <label for="eq1" class="equip-text">
+                    <div class="equip-name">Large roasting pan or deep baking dish</div>
+                    <div class="equip-desc">Big enough to hold the pork in a single layer and to wrap everything in banana leaves.</div>
+                  </label>
+                </div>
+                <div class="equip-thumb">
+                  <img src="https://nibblesandfeasts.com/wp-content/uploads/2017/02/Pibil-2.jpg" alt="Roasting pan with cochinita pibil wrapped in banana leaves">
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq2">
+                  <label for="eq2" class="equip-text">
+                    <div class="equip-name">Banana leaves</div>
+                    <div class="equip-desc">Wrap the pork to trap moisture and flavor, echoing the traditional underground pit method.</div>
+                  </label>
+                </div>
+                <div class="equip-thumb">
+                  <img src="https://www.shutterstock.com/image-photo/banana-leaf-on-table-wood-600nw-421767169.jpg" alt="Fresh banana leaf on a table">
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq3">
+                  <label for="eq3" class="equip-text">
+                    <div class="equip-name">Blender or food processor</div>
+                    <div class="equip-desc">Blends the achiote paste, citrus juice, spices, and aromatics into a smooth marinade.</div>
+                  </label>
+                </div>
+                <div class="equip-thumb">
+                  <img src="https://www.seriouseats.com/thmb/3Ju_ovzjbyH628N-TV06UXpU5a8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__05__20160510-cochinita-pibil-recipe-09-376f2687f0e64a06b0bef661a6169078.jpg" alt="Achiote marinade being poured">
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq4">
+                  <label for="eq4" class="equip-text">
+                    <div class="equip-name">Sharp chef's knife &amp; cutting board</div>
+                    <div class="equip-desc">For cutting the pork shoulder into large chunks and slicing onions.</div>
+                  </label>
+                </div>
+                <div class="equip-thumb">
+                  <img src="https://www.shutterstock.com/image-photo/many-chunks-pork-shoulder-knives-600nw-2524221255.jpg" alt="Pork shoulder cut into chunks with knife">
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq5">
+                  <label for="eq5" class="equip-text">
+                    <div class="equip-name">Aluminum foil or roasting pan lid</div>
+                    <div class="equip-desc">Covers the pan to keep steam inside during the long bake.</div>
+                  </label>
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq6">
+                  <label for="eq6" class="equip-text">
+                    <div class="equip-name">Tongs or large forks</div>
+                    <div class="equip-desc">For turning the pork in the marinade and shredding it after cooking.</div>
+                  </label>
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq7">
+                  <label for="eq7" class="equip-text">
+                    <div class="equip-name">Large serving platter</div>
+                    <div class="equip-desc">To hold the shredded cochinita pibil for serving.</div>
+                  </label>
+                </div>
+                <div class="equip-thumb">
+                  <img src="https://keviniscooking.com/wp-content/uploads/2020/08/Cochinita-Pibli-Yucatan-Pork-square-500x375.jpg" alt="Shredded cochinita pibil in a pan">
+                </div>
+              </li>
+
+              <li class="equip-item">
+                <div class="equip-check">
+                  <input type="checkbox" id="eq8">
+                  <label for="eq8" class="equip-text">
+                    <div class="equip-name">Large oven bag <em style="font-weight:330">(optional)</em></div>
+                    <div class="equip-desc">Catches juices and makes cleanup much easier.</div>
+                  </label>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 3. PREP ── -->
+      <div class="recipe-section" id="section-prep">
+        <div class="section-header" role="button" tabindex="0" aria-expanded="false"
+             onclick="toggleSection(this)" onkeydown="keyToggle(event,this)">
+          <h2>Prep</h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="section-body">
+          <div class="section-inner">
+            <p class="prep-summary">Prep involves softening the banana leaves, blending the achiote-citrus marinade, cutting the pork into large chunks, and giving it time to marinate so the flavors penetrate deeply before baking.</p>
+            <div class="prep-layout">
+              <div class="prep-img">
+                <img src="https://www.isabeleats.com/wp-content/uploads/2025/02/conchinita-pibil-5-scaled.jpg" alt="Pork cubes marinating in achiote sauce" />
+              </div>
+              <ul class="outdented-list">
+                <li><span class="bullet">1.</span><span>Soften the banana leaves briefly over low heat until pliable, then line a roasting pan with them, leaving overhang to fold over the pork.</span></li>
+                <li><span class="bullet">2.</span><span>Blend achiote paste with bitter orange juice (or orange juice + vinegar/lime), garlic, black pepper, cumin, oregano, and salt into a smooth, brick-red marinade.</span></li>
+                <li><span class="bullet">3.</span><span>Cut the pork shoulder into 2½–3 inch cubes and arrange them in an even layer over the banana leaves.</span></li>
+                <li><span class="bullet">4.</span><span>Pour the marinade over the pork, add the lard, and turn pieces until well coated. Cover and marinate in the refrigerator at least 2–4 hours, or overnight.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 4. INGREDIENTS ── -->
+      <div class="recipe-section" id="section-ing">
+        <div class="section-header" role="button" tabindex="0" aria-expanded="false"
+             onclick="toggleSection(this)" onkeydown="keyToggle(event,this)">
+          <h2>Ingredients</h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="section-body">
+          <div class="section-inner">
+            <div class="ing-layout">
+              <ul class="ing-list">
+
+                <li><a class="ing-item" href="#step-3" onclick="openSection('section-instr')" title="Used in Step 3">
+                  <span class="ing-amount">3 lbs</span>
+                  <span class="ing-name">Boneless pork butt or shoulder</span>
+                  <span class="ing-note">Cut into 2½–3 inch cubes</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-1" onclick="openSection('section-instr')" title="Used in Step 1">
+                  <span class="ing-amount">2 large</span>
+                  <span class="ing-name">Banana leaves</span>
+                  <span class="ing-note">For lining the pan and wrapping the pork</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Step 2">
+                  <span class="ing-amount">1¾ oz</span>
+                  <span class="ing-name">Achiote paste</span>
+                  <span class="ing-note">About half a standard stick</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Step 2">
+                  <span class="ing-amount">2 cups</span>
+                  <span class="ing-name">Bitter orange juice or substitute</span>
+                  <span class="ing-note">Or orange juice + white vinegar/lime/grapefruit</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Step 2">
+                  <span class="ing-amount">2 cloves</span>
+                  <span class="ing-name">Garlic</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Step 2">
+                  <span class="ing-amount">½ tsp</span>
+                  <span class="ing-name">Ground black pepper</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Step 2">
+                  <span class="ing-amount">¼ tsp</span>
+                  <span class="ing-name">Whole cumin</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-5" onclick="openSection('section-instr')" title="Used in Step 5">
+                  <span class="ing-amount">1–2</span>
+                  <span class="ing-name">Whole allspice berries</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Steps 2 &amp; 5">
+                  <span class="ing-amount">1 tsp</span>
+                  <span class="ing-name">Dried Mexican oregano</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-4" onclick="openSection('section-instr')" title="Used in Step 4">
+                  <span class="ing-amount">¼ cup</span>
+                  <span class="ing-name">Lard or neutral oil</span>
+                  <span class="ing-note">Carries the spices and keeps the meat moist</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-5" onclick="openSection('section-instr')" title="Used in Step 5">
+                  <span class="ing-amount">1 large</span>
+                  <span class="ing-name">Red onion, sliced</span>
+                  <span class="ing-note">Highly recommended</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-2" onclick="openSection('section-instr')" title="Used in Steps 2 &amp; 7">
+                  <span class="ing-amount">To taste</span>
+                  <span class="ing-name">Salt</span>
+                </a></li>
+
+                <li><a class="ing-item" href="#step-6" onclick="openSection('section-instr')" title="Used in Step 6">
+                  <span class="ing-amount">1 bag</span>
+                  <span class="ing-name">Large oven bag (optional)</span>
+                  <span class="ing-note">For easier cleanup</span>
+                </a></li>
+
+              </ul>
+
+              <div class="ing-mosaic">
+                <img src="https://www.cooksinfo.com/wp-content/uploads/annato-achiote-paste.jpg" alt="Achiote paste block">
+                <img src="https://img.freepik.com/free-photo/front-view-orange-juice-glass-with-lime-lemon-oranges-grapefruit_141793-49364.jpg" alt="Orange juice with limes">
+                <img src="https://as2.ftcdn.net/jpg/00/89/28/13/1000_F_89281321_Z4p5IwaFFpqua9EqxrtzSdO2lXbnMLbm.jpg" alt="Spices: allspice, cumin, oregano">
+                <img src="https://homesteadingfamily.com/wp-content/uploads/2021/04/rendered-solidified-lard-1024x683.jpg" alt="Lard in a bowl">
+              </div>
+            </div>
+            <p class="ing-hint">→ Click any ingredient to jump to the step where it's used.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 5. INSTRUCTIONS ── -->
+      <div class="recipe-section" id="section-instr">
+        <div class="section-header" role="button" tabindex="0" aria-expanded="false"
+             onclick="toggleSection(this)" onkeydown="keyToggle(event,this)">
+          <h2>Instructions</h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="section-body">
+          <div class="section-inner">
+            <ol class="steps-list">
+
+              <li class="step-item" id="step-1">
+                <span class="step-num">1</span>
+                <div class="step-content">
+                  <div class="step-title">Soften and prepare the banana leaves</div>
+                  <p class="step-text">Quickly pass the banana leaves over a <strong>low flame or warm burner</strong> until pliable, then line a large roasting pan, leaving enough overhang to fold back over the pork.</p>
+                  <div class="step-img">
+                    <img src="https://www.seriouseats.com/thmb/QJaiFTBz7ZuckG6agZFe48x0rRA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__05__20160510-cochinita-pibil-recipe-27-e190334085914655ba0724ca64d9ce74.jpg" alt="Banana leaves folded over pork in roasting pan">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-2">
+                <span class="step-num">2</span>
+                <div class="step-content">
+                  <div class="step-title">Blend the achiote marinade</div>
+                  <p class="step-text">Blend achiote paste with <strong>bitter orange juice</strong> (or orange juice + vinegar), garlic, black pepper, cumin, oregano, and a generous pinch of salt until you have a <strong>smooth, brick-red marinade</strong>.</p>
+                  <div class="step-img">
+                    <img src="https://www.seriouseats.com/thmb/3Ju_ovzjbyH628N-TV06UXpU5a8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__05__20160510-cochinita-pibil-recipe-09-376f2687f0e64a06b0bef661a6169078.jpg" alt="Pouring achiote marinade over pork">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-3">
+                <span class="step-num">3</span>
+                <div class="step-content">
+                  <div class="step-title">Cut and arrange the pork</div>
+                  <p class="step-text">Cut the pork into <strong>2½–3 inch chunks</strong> and arrange in an even layer over the banana leaves in the pan.</p>
+                  <div class="step-img">
+                    <img src="https://www.shutterstock.com/image-photo/many-chunks-pork-shoulder-knives-600nw-2524221255.jpg" alt="Raw pork shoulder cut into chunks">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-4">
+                <span class="step-num">4</span>
+                <div class="step-content">
+                  <div class="step-title">Marinate the pork</div>
+                  <p class="step-text">Pour the marinade over the pork, add the lard, and gently turn each piece until well coated. Cover and <strong>refrigerate at least 2–4 hours</strong>, or overnight for deeper flavor.</p>
+                  <div class="step-img">
+                    <img src="https://www.isabeleats.com/wp-content/uploads/2025/02/conchinita-pibil-5-scaled.jpg" alt="Pork cubes marinating in achiote sauce">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-5">
+                <span class="step-num">5</span>
+                <div class="step-content">
+                  <div class="step-title">Add onions and aromatics</div>
+                  <p class="step-text">Scatter the sliced red onion, oregano, and allspice berries over the marinated pork, letting them settle into the liquid.</p>
+                  <div class="step-img">
+                    <img src="https://www.rachelcooks.com/wp-content/uploads/2021/09/pickled-red-onions-1500-2.jpg" alt="Thinly sliced red onions">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-6">
+                <span class="step-num">6</span>
+                <div class="step-content">
+                  <div class="step-title">Wrap tightly in banana leaves</div>
+                  <p class="step-text">Fold the banana leaves <strong>snugly over the pork</strong> to form a sealed package. Optionally, slide the bundle into an oven bag for easier cleanup, then seal.</p>
+                  <div class="step-img">
+                    <img src="https://www.seriouseats.com/thmb/QJaiFTBz7ZuckG6agZFe48x0rRA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__05__20160510-cochinita-pibil-recipe-27-e190334085914655ba0724ca64d9ce74.jpg" alt="Banana leaves folded over pork">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-7">
+                <span class="step-num">7</span>
+                <div class="step-content">
+                  <div class="step-title">Bake low and slow</div>
+                  <p class="step-text">Cover the pan tightly with its lid or foil and bake at <strong>325–350°F for about 2½ hours</strong>, until the pork shreds easily with a fork. Check every 20–30 minutes if it needs more time.</p>
+                  <div class="step-img">
+                    <img src="https://carlsbadcravings.com/wp-content/uploads/2024/07/Cochinita-Pibil-6.jpg" alt="Cochinita pibil baking in a covered vessel">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-8">
+                <span class="step-num">8</span>
+                <div class="step-content">
+                  <div class="step-title">Shred and keep it moist</div>
+                  <p class="step-text">Carefully unwrap the banana leaves and <strong>shred the pork</strong> directly in the pan or on a platter. Spoon the cooking juices generously over the top.</p>
+                  <div class="step-img">
+                    <img src="https://www.chilipeppermadness.com/wp-content/uploads/2024/04/Cochinita-Pibil-Recipe-SHRED.jpg" alt="Shredded cochinita pibil with cooking juices">
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item" id="step-9">
+                <span class="step-num">9</span>
+                <div class="step-content">
+                  <div class="step-title">Serve with tortillas and garnishes</div>
+                  <p class="step-text">Serve hot with <strong>warm tortillas, pickled red onions, and lime wedges</strong>. The citrus and onions cut through the richness of the pork perfectly.</p>
+                  <div class="step-img">
+                    <img src="https://thenovicechefblog.com/wp-content/uploads/2022/08/Instant-Pot-Cochinita-Pibil-13.jpeg" alt="Cochinita pibil tacos with pickled red onions">
+                  </div>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ENJOY ── -->
+      <div class="enjoy-msg">¡Buen provecho!</div>
+
+      <!-- ── 6. ORIGIN ── -->
+      <div class="recipe-section" id="section-origin">
+        <div class="section-header" role="button" tabindex="0" aria-expanded="false"
+             onclick="toggleSection(this)" onkeydown="keyToggle(event,this)">
+          <h2>About This Dish</h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="section-body">
+          <div class="section-inner">
+            <div class="origin-text">
+              <p>Cochinita pibil is a traditional Yucatec Mayan dish from Mexico's Yucatán Peninsula, historically made with marinated pork slow-roasted in an underground pit called a <em>píib</em>.</p>
+              <p>Classic versions marinate the meat in sour orange juice and achiote, wrap it in banana leaves, then bury it over hot coals so it cooks gently for hours — emerging smoky, tangy, and incredibly tender.</p>
+              <p>Modern home cooks recreate the same flavors in a regular oven or slow cooker, keeping the achiote-citrus profile and banana leaves but trading the earthen pit for covered roasting pans or electric appliances.</p>
+            </div>
+            <div class="origin-gallery">
+              <figure><img src="https://cdn.britannica.com/74/241474-050-5644736B/Locator-map-Yucatan-Peninsula.jpg" alt="Locator map of Yucatán Peninsula"></figure>
+              <figure><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Enterrando_los_pibipollos.jpg" alt="Traditional underground pit oven"></figure>
+              <figure><img src="https://images.squarespace-cdn.com/content/v1/570d3048f699bb1e46683c68/1632167039206-JRENKDOZYG4EJ6386O8B/Maya_Luxe_Riviera_Maya_Magazine_Markets_Article_3.jpg" alt="Market in Mérida with citrus and spices"></figure>
+              <figure><img src="https://www.seriouseats.com/thmb/Qd5b9FX8y_M4vtTzc2DfZ2wTk1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__05__20160510-cochinita-pibil-recipe-20-composite-e38b09ef2d8c443a87728068c5ec1683.jpg" alt="Cochinita pibil in a traditional serving dish"></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 7. OTHER RECIPES ── -->
+      <div class="recipe-section" id="section-other">
+        <div class="section-header" role="button" tabindex="0" aria-expanded="false"
+             onclick="toggleSection(this)" onkeydown="keyToggle(event,this)">
+          <h2>Other Recipes to Try</h2>
+          <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="section-body">
+          <div class="section-inner">
+            <p class="other-intro">If you like the tangy, slow-roasted flavors of cochinita pibil, here are a few other dishes worth exploring.</p>
+            <div class="other-grid">
+              <div class="other-card">
+                <div class="other-card-title">Slow-Cooker Pulled Pork</div>
+                <div class="other-card-desc">A comforting pulled pork recipe with the same "set it and forget it" cooking rhythm.</div>
+              </div>
+              <div class="other-card">
+                <div class="other-card-title">Pork Carnitas</div>
+                <div class="other-card-desc">Another Mexican pulled-pork classic, usually crisped at the end, piled into tortillas.</div>
+              </div>
+              <div class="other-card">
+                <div class="other-card-title">Tacos de Cochinita Pibil</div>
+                <div class="other-card-desc">Use this recipe as a base and focus on assembling tacos with pickled onions, salsa, and fresh herbs.</div>
+              </div>
+              <div class="other-card">
+                <div class="other-card-title">Yucatán-Style Citrus-Braised Chicken</div>
+                <div class="other-card-desc">Swap pork for chicken thighs, keep the achiote and citrus marinade — a lighter take on the same profile.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /recipe-paper -->
+  </div><!-- /page-wrapper -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="site-footer">
+    <a href="#top" id="back-top-btn">↑ Back to Top</a>
+  </footer>
+
+  <!-- ═══ JS ═══ -->
+  <script>
+    const menuBtn   = document.getElementById('menu-btn');
+    const navDrawer = document.getElementById('nav-drawer');
+
+    menuBtn.addEventListener('click', () => {
+      navDrawer.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if (!navDrawer.contains(e.target) && e.target !== menuBtn) {
+        navDrawer.classList.remove('open');
+      }
+    });
+    function closeMenu() { navDrawer.classList.remove('open'); }
+
+    function toggleSection(header) {
+      const body   = header.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open');
+      header.classList.toggle('open');
+      header.setAttribute('aria-expanded', !isOpen);
+    }
+
+    function openSection(sectionId) {
+      const sec = document.getElementById(sectionId);
+      if (!sec) return;
+      const header = sec.querySelector('.section-header');
+      const body   = sec.querySelector('.section-body');
+      if (!body.classList.contains('open')) {
+        body.classList.add('open');
+        if (header) {
+          header.classList.add('open');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      }
+    }
+
+    function keyToggle(e, header) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleSection(header);
+      }
+    }
+
+    const printBtn = document.getElementById('print-btn');
+    let printModeOn = false;
+    printBtn.addEventListener('click', () => {
+      printModeOn = !printModeOn;
+      document.body.classList.toggle('print-mode', printModeOn);
+      printBtn.textContent = printModeOn ? 'Collapse View' : 'Print View';
+    });
+  </script>
+
+</body>
+</html>

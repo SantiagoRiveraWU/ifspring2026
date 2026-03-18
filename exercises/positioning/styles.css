@@ -1,0 +1,64 @@
+/* CSS Positioning yayayaya */
+
+/* ----------------------------------------------------------
+   STATIC EXAMPLE
+   Step 1: Confirm selector works with green background.
+   Step 2: left: 100px — has no effect on static elements.
+   ---------------------------------------------------------- */
+.static-example .positioned-element {
+  background-color: green;
+  left: 100px; /* No visible effect — position is static by default */
+}
+
+/* ----------------------------------------------------------
+   RELATIVE EXAMPLE
+   Steps: lightblue, position: relative, left: 100px, top: 50px
+   Z-index step (from z-index section): z-index: -1
+   ---------------------------------------------------------- */
+.relative-example .positioned-element {
+  background-color: lightblue;
+  position: relative;
+  left: 100px;
+  top: 50px;
+  z-index: -1; /* Sends it behind the text (z-index section step) */
+}
+
+/* ----------------------------------------------------------
+   ABSOLUTE EXAMPLE
+   Section: position: relative (makes it the positioning parent)
+   Square: red, position: absolute, top: 0, right: 0
+   ---------------------------------------------------------- */
+.absolute-example {
+  position: relative;
+}
+
+.absolute-example .positioned-element {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* ----------------------------------------------------------
+   FIXED EXAMPLE
+   Steps: purple, position: fixed, top: 0, left: 0, width: 100%
+   Z-index step (from z-index section): z-index: 9999
+   ---------------------------------------------------------- */
+.fixed-example .positioned-element {
+  background-color: purple;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Keeps navbar in front of sticky orange square */
+}
+
+/* ----------------------------------------------------------
+   STICKY EXAMPLE
+   Steps: orange, position: sticky, top: 50px
+   ---------------------------------------------------------- */
+.sticky-example .positioned-element {
+  background-color: orange;
+  position: sticky;
+  top: 50px;
+}

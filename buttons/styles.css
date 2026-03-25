@@ -1,0 +1,524 @@
+/* ============================================================
+   BASE
+   ============================================================ */
+body {
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	margin: 40px;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+
+.button_container {
+	border: 1px solid #ddd;
+	margin: 0 10px 10px 0;
+	padding: 20px;
+	width: 300px;
+	height: 300px;
+	float: left;
+	overflow: hidden;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+
+/* ============================================================
+   ORIGINAL BUTTONS (unchanged)
+   ============================================================ */
+
+a#btn_spotify {
+	display: inline-block;
+	height: 50px;
+	box-sizing: border-box;
+	border-radius: 25px;
+	margin: auto;
+	margin-top: 100px;
+	padding: 10px 40px 0 40px;
+	background-color: #2ebd59;
+	border: 2px solid #2ebd59;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	transition: all .5s;
+}
+a#btn_spotify:hover {
+	background-color: #fff;
+	border: 2px solid #000;
+	color: #000;
+}
+
+a#btn_amazon {
+	display: block;
+	width: 100px;
+	height: 100px;
+	box-sizing: border-box;
+	border-radius: 50px;
+	margin: auto;
+	margin-top: 75px;
+	padding-top: 8px;
+	background-color: #232f3e;
+	color: #fff;
+	text-align: center;
+	font-size: 60px;
+	transition: all .2s;
+}
+a#btn_amazon:hover {
+	background-color: #fc9a18;
+}
+
+a#btn_twitter {
+	display: inline-block;
+	height: 40px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin: auto;
+	margin-top: 105px;
+	padding: 10px 30px 0 30px;
+	background-color: #56cdf1;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Arial', sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+a#btn_twitter:hover {
+	background: rgb(46,191,236);
+	background: -moz-linear-gradient(-45deg, rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%);
+	background: linear-gradient(135deg, rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ebfec', endColorstr='#28a5cb', GradientType=1);
+}
+
+a#btn_indiegogo {
+	display: inline-block;
+	position: relative;
+	margin: auto;
+	margin-top: 100px;
+	padding: 8px 16px;
+	background-color: #fff;
+	color: #eb1478;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: -2px;
+	transition: all .2s;
+}
+a#btn_indiegogo:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: #eb1478;
+	transition: all .5s;
+}
+a#btn_indiegogo:hover {
+	color: #fff;
+}
+a#btn_indiegogo:hover:before {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+a#btn_indiegogo span {
+	position: relative;
+	z-index: 10;
+}
+
+
+/* ============================================================
+   NEW BUTTON 1 — NPR
+   Three-block logo: red N · black P · blue R
+   Hover: letters bounce down / up / down + button scales up
+   Active (click): scales even larger for tactile feel
+   ============================================================ */
+
+a#btn_npr {
+	display: inline-flex;
+	align-items: stretch;
+	text-decoration: none;
+	margin-top: 103px;
+	border-radius: 3px;
+	overflow: hidden;
+	/* Subtle all-around shadow so it floats on the white bg */
+	box-shadow:
+		0 0 0 1px rgba(0,0,0,0.08),
+		0 2px 10px rgba(0,0,0,0.18),
+		0 0 6px rgba(0,0,0,0.08);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+a#btn_npr:hover {
+	transform: scale(1.09);
+	box-shadow:
+		0 0 0 1px rgba(0,0,0,0.1),
+		0 4px 18px rgba(0,0,0,0.28),
+		0 0 10px rgba(0,0,0,0.12);
+}
+a#btn_npr:active {
+	transform: scale(1.14);
+	transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+}
+
+.npr-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 55px;
+	height: 55px;
+}
+.npr-red   { background-color: #c8102e; }
+.npr-black { background-color: #000000; }
+.npr-blue  { background-color: #004b87; }
+
+.npr-letter {
+	display: block;
+	color: #ffffff;
+	font-family: 'Arial Black', 'Arial', sans-serif;
+	font-size: 28px;
+	font-weight: 900;
+	line-height: 1;
+	transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* n → shifts DOWN, p → shifts UP, r → shifts DOWN */
+a#btn_npr:hover .npr-block:nth-child(1) .npr-letter { transform: translateY(7px);  }
+a#btn_npr:hover .npr-block:nth-child(2) .npr-letter { transform: translateY(-7px); }
+a#btn_npr:hover .npr-block:nth-child(3) .npr-letter { transform: translateY(7px);  }
+
+
+/* ============================================================
+   NEW BUTTON 2 — CARTOON NETWORK
+   Classic B&W split: left = black bg / white C, right = white bg / black N
+   Hover: "Cartoon Network" text bounces up from below with personality
+   Active: scales up for click feedback
+   ============================================================ */
+
+a#btn_cn {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	margin-top: 68px;
+	transition: transform 0.2s ease;
+}
+a#btn_cn:active {
+	transform: scale(1.1);
+	transition: transform 0.08s ease-out;
+}
+
+.cn-logo {
+	display: flex;
+	width: 90px;
+	height: 90px;
+	border: 3px solid #000;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.cn-half {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Arial Black', 'Arial', sans-serif;
+	font-size: 50px;
+	font-weight: 900;
+	line-height: 1;
+	user-select: none;
+}
+.cn-c {
+	background: #000;
+	color: #fff;
+}
+.cn-n {
+	background: #fff;
+	color: #000;
+	border-left: 3px solid #000;
+}
+
+/* The "Cartoon Network" label — hidden & offset downward by default */
+.cn-name {
+	margin-top: 8px;
+	font-family: 'Arial Black', 'Arial', sans-serif;
+	font-size: 10px;
+	font-weight: 900;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: #000;
+	text-align: center;
+	line-height: 1.35;
+	opacity: 0;
+	transform: translateY(28px);
+	/* No CSS transition here — the keyframe animation owns it on hover */
+}
+
+a#btn_cn:hover .cn-name {
+	animation: cn-bounce-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes cn-bounce-up {
+	0%   { opacity: 0; transform: translateY(28px); }
+	40%  { opacity: 1; transform: translateY(-8px); }
+	65%  { transform: translateY(4px);  }
+	82%  { transform: translateY(-3px); }
+	100% { opacity: 1; transform: translateY(0px);  }
+}
+
+
+/* ============================================================
+   NEW BUTTON 3 — OLD NAVY
+   Default: navy text on white, no outline
+   Hover: navy-filled oval expands smoothly around the text, text turns white
+   Active (click): inverts — white oval with navy text + faint shadow so
+                   the white oval doesn't vanish against the white bg
+   ============================================================ */
+
+a#btn_oldnavy {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-top: 108px;
+	padding: 13px 38px;
+	text-decoration: none;
+	border-radius: 60px;           /* pill / oval shape */
+	border: 3px solid transparent;
+	background: transparent;
+	/* Transition background + border + shadow + scale together */
+	transition:
+		background   0.38s ease,
+		border-color 0.38s ease,
+		box-shadow   0.25s ease,
+		transform    0.15s ease;
+}
+
+.on-text {
+	font-family: 'Oswald', 'Arial Black', sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #1b2d78;            /* OLD NAVY navy */
+	transition: color 0.38s ease;
+}
+
+/* Hover: filled navy oval → text goes white */
+a#btn_oldnavy:hover {
+	background: #1b2d78;
+	border-color: #1b2d78;
+}
+a#btn_oldnavy:hover .on-text {
+	color: #ffffff;
+}
+
+/* Click: inverted — white oval, navy text, halo shadow so it reads on white bg */
+a#btn_oldnavy:active {
+	transform: scale(1.06);
+	background: #ffffff;
+	border-color: #1b2d78;
+	box-shadow:
+		0 0 0 1px rgba(27, 45, 120, 0.15),
+		0 4px 22px rgba(27, 45, 120, 0.25);
+	transition:
+		background   0.05s ease,
+		border-color 0.05s ease,
+		transform    0.08s ease-out,
+		box-shadow   0.08s ease;
+}
+a#btn_oldnavy:active .on-text {
+	color: #1b2d78;
+}
+
+
+/* ============================================================
+   NEW BUTTON 4 — HARLEY-DAVIDSON
+   Shows the text-less "Bar & Shield" logo in B&W
+   Hover: "HARLEY-DAVIDSON" slides in from the left into the
+          bottom scroll/banner of the shield
+   Active: scales up
+   ============================================================ */
+
+a#btn_hd {
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 44px;
+	transition: transform 0.15s ease;
+}
+a#btn_hd:active {
+	transform: scale(1.07);
+	transition: transform 0.08s ease-out;
+}
+
+.hd-wrap {
+	position: relative;
+	display: inline-block;
+	line-height: 0; /* remove phantom space under SVG */
+}
+
+.hd-svg {
+	width: 200px;
+	height: 153px; /* viewBox 220×168 scaled to 200px wide → height = 168*(200/220) ≈ 153 */
+	display: block;
+}
+
+/*
+  Banner clip: positioned exactly over the bottom scroll area of the SVG.
+  SVG viewBox 220×168 → displayed at 200×153 (scale = 200/220 ≈ 0.909)
+  Scroll in viewBox: top≈102, bottom≈163, left≈27, right≈193
+  In display px: top≈93, bottom≈148, left≈25, right≈175
+*/
+.hd-banner-clip {
+	position: absolute;
+	top:  93px;
+	left: 27px;
+	right: 27px;   /* 200 - 175 = 25px → add a couple px margin */
+	height: 50px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Text starts far to the left, slides in on hover */
+.hd-text {
+	font-family: 'Oswald', 'Arial Black', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: #111111;
+	white-space: nowrap;
+	transform: translateX(-200px);
+	transition: transform 0.48s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a#btn_hd:hover .hd-text {
+	transform: translateX(0);
+}
+
+
+/* ============================================================
+   NEW BUTTON 5 — FITBIT
+   A dark, glass-like Versa-style watch face (rounded square)
+   with subtle edge glint for screen-like depth.
+   Hover: "fitbit" logo rises, current 24 h time fades in below.
+   Active: watch scales up.
+   ============================================================ */
+
+a#btn_fitbit {
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 55px;
+	transition: transform 0.15s ease;
+}
+a#btn_fitbit:active {
+	transform: scale(1.08);
+	transition: transform 0.08s ease-out;
+}
+
+.fitbit-watch {
+	position: relative;
+	width: 130px;
+	height: 150px;
+	border-radius: 34px;   /* Versa / Sense rounded-square feel */
+	/* Deep black with a very subtle cool tint */
+	background: radial-gradient(ellipse at 35% 25%,
+		#1a1a28 0%,
+		#0d0d16 45%,
+		#060609 100%);
+	/* Layered shadows for depth + that thin iridescent ring */
+	box-shadow:
+		0 0 0 1px   rgba(140, 140, 220, 0.18),   /* outer glow ring   */
+		0 0 0 2.5px rgba(60,  60,  120, 0.12),   /* secondary ring    */
+		0 8px 28px  rgba(0,   0,   0,   0.75),   /* drop shadow       */
+		inset 0  1px 1px rgba(255, 255, 255, 0.10), /* top inner light */
+		inset 0 -1px 1px rgba(0,   0,   0,   0.55), /* bottom shadow  */
+		inset 1px  0 1px rgba(255, 255, 255, 0.06),
+		inset -1px 0 1px rgba(0,   0,   0,   0.30);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+}
+
+/* Soft glint / glass sheen across the top half */
+.fitbit-glint {
+	position: absolute;
+	top: 0;
+	left: 4%;
+	right: 4%;
+	height: 52%;
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0.09) 0%,
+		rgba(255, 255, 255, 0.03) 60%,
+		transparent 100%
+	);
+	border-radius: 34px 34px 0 0;
+	pointer-events: none;
+}
+
+/* "fitbit" wordmark — thin, spaced, signature light-weight */
+.fitbit-logo {
+	display: block;
+	color: rgba(255, 255, 255, 0.92);
+	font-family: 'Raleway', 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 200;
+	letter-spacing: 5px;
+	text-indent: 5px; /* compensate for trailing letter-spacing */
+	position: relative;
+	z-index: 2;
+	transform: translateY(0);
+	transition: transform 0.38s cubic-bezier(0.34, 1.25, 0.64, 1);
+}
+
+/* Time display — hidden until hover */
+.fitbit-time {
+	display: block;
+	color: rgba(255, 255, 255, 0.60);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 2.5px;
+	text-indent: 2.5px;
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+	transform: translateY(10px);
+	max-height: 0;
+	overflow: hidden;
+	transition:
+		opacity     0.30s ease 0.12s,
+		transform   0.30s ease 0.12s,
+		max-height  0.30s ease;
+}
+
+/* On hover: logo rises, time fades in below */
+a#btn_fitbit:hover .fitbit-logo {
+	transform: translateY(-13px);
+}
+a#btn_fitbit:hover .fitbit-time {
+	opacity: 1;
+	transform: translateY(0);
+	max-height: 22px;
+}

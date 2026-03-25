@@ -1,0 +1,144 @@
+<head>
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Buttons — Santiago Rivera</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Oswald:wght@600;700&display=swap" rel="stylesheet" type="text/css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<main>
+		<h1>Button Styling — Santiago Rivera</h1>
+
+		<!-- ── ORIGINAL BUTTONS ── -->
+		<div class="button_container">
+			<a href="http://www.spotify.com" target="_blank" id="btn_spotify">Spotify</a>
+		</div>
+
+		<div class="button_container">
+			<a href="http://www.amazon.com" target="_blank" id="btn_amazon"><i class="fa fa-amazon"></i></a>
+		</div>
+
+		<div class="button_container">
+			<a href="http://www.twitter.com" target="_blank" id="btn_twitter">twitter</a>
+		</div>
+
+		<div class="button_container">
+			<a href="http://www.indiegogo.com" target="_blank" id="btn_indiegogo"><span>indiegogo</span></a>
+		</div>
+
+		<!-- ── NEW BUTTONS ── -->
+
+		<!-- 1. NPR -->
+		<div class="button_container">
+			<a href="https://www.npr.org/" target="_blank" id="btn_npr">
+				<span class="npr-block npr-red"><span class="npr-letter">n</span></span>
+				<span class="npr-block npr-black"><span class="npr-letter">p</span></span>
+				<span class="npr-block npr-blue"><span class="npr-letter">r</span></span>
+			</a>
+		</div>
+
+		<!-- 2. Cartoon Network -->
+		<div class="button_container">
+			<a href="https://www.hbomax.com/channel/cartoon-network" target="_blank" id="btn_cn">
+				<div class="cn-logo">
+					<div class="cn-half cn-c">C</div>
+					<div class="cn-half cn-n">N</div>
+				</div>
+				<div class="cn-name">Cartoon<br>Network</div>
+			</a>
+		</div>
+
+		<!-- 3. Old Navy -->
+		<div class="button_container">
+			<a href="https://oldnavy.gap.com/" target="_blank" id="btn_oldnavy">
+				<span class="on-text">OLD NAVY</span>
+			</a>
+		</div>
+
+		<!-- 4. Harley-Davidson -->
+		<div class="button_container">
+			<a href="https://www.harley-davidson.com/us/en/index.html" target="_blank" id="btn_hd">
+				<div class="hd-wrap">
+					<svg class="hd-svg" viewBox="0 0 220 168" xmlns="http://www.w3.org/2000/svg">
+						<!-- Main shield body -->
+						<path d="M18,5 L202,5 L202,100 Q202,148 110,165 Q18,148 18,100 Z"
+							fill="white" stroke="black" stroke-width="5"/>
+
+						<!-- Top badge — outer frame -->
+						<path d="M56,15 L164,15 L164,68 L110,74 L56,68 Z"
+							fill="white" stroke="black" stroke-width="3"/>
+
+						<!-- Top badge — inner frame -->
+						<path d="M63,21 L157,21 L157,63 L110,69 L63,63 Z"
+							fill="none" stroke="black" stroke-width="1.5"/>
+
+						<!-- Badge ornament: horizontal rules + ring + center dot -->
+						<line x1="63" y1="28" x2="157" y2="28" stroke="black" stroke-width="1"/>
+						<line x1="63" y1="62" x2="157" y2="62" stroke="black" stroke-width="1"/>
+						<circle cx="110" cy="44" r="13" fill="none" stroke="black" stroke-width="2"/>
+						<circle cx="110" cy="44" r="5"  fill="black"/>
+						<line x1="63"  y1="44" x2="94"  y2="44" stroke="black" stroke-width="1.5"/>
+						<line x1="126" y1="44" x2="157" y2="44" stroke="black" stroke-width="1.5"/>
+
+						<!-- Horizontal bar -->
+						<rect x="18" y="74" width="184" height="26" fill="black"/>
+
+						<!-- Wing tips on bar -->
+						<polygon points="18,74 0,87 18,100"  fill="black"/>
+						<polygon points="202,74 220,87 202,100" fill="black"/>
+
+						<!-- Bar centre ornament -->
+						<circle cx="110" cy="87" r="7"  fill="none" stroke="white" stroke-width="2"/>
+						<line x1="28"  y1="87" x2="100" y2="87" stroke="white" stroke-width="1.5"/>
+						<line x1="120" y1="87" x2="192" y2="87" stroke="white" stroke-width="1.5"/>
+
+						<!-- Bottom scroll / banner (empty — text slides in on hover) -->
+						<path d="M22,102 Q110,93 198,102 L193,153 Q110,165 27,153 Z"
+							fill="white" stroke="black" stroke-width="2"/>
+					</svg>
+
+					<!-- Banner text slides in from the left on hover -->
+					<div class="hd-banner-clip">
+						<span class="hd-text">HARLEY-DAVIDSON</span>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<!-- 5. Fitbit -->
+		<div class="button_container">
+			<a href="https://store.google.com/category/watches_trackers?hl=en-US&utm_source=fitbit_redirect&utm_medium=google_ooo&utm_campaign=category"
+			   target="_blank" id="btn_fitbit">
+				<div class="fitbit-watch">
+					<!-- Glossy highlight overlay -->
+					<div class="fitbit-glint"></div>
+					<span class="fitbit-logo">fitbit</span>
+					<span class="fitbit-time" id="fitbit-time"></span>
+				</div>
+			</a>
+		</div>
+
+	</main>
+
+	<script>
+		// Live clock for the Fitbit button (24-hour HH:MM)
+		function updateFitbitClock() {
+			var now  = new Date();
+			var hh   = String(now.getHours()).padStart(2, '0');
+			var mm   = String(now.getMinutes()).padStart(2, '0');
+			var el   = document.getElementById('fitbit-time');
+			if (el) el.textContent = hh + ':' + mm;
+		}
+		updateFitbitClock();
+		setInterval(updateFitbitClock, 1000);
+	</script>
+</body>
+</html>

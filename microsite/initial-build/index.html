@@ -1,0 +1,461 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MECH//KEYS — A Guide to Mechanical Keyboards</title>
+
+  <!-- Share Tech Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ INTRO PAGE ============ -->
+  <section id="intro-page" class="intro-page">
+    <div class="intro-wrapper">
+      <p class="intro-eyebrow">// AN INFORMATIONAL GUIDE</p>
+      <h1 class="intro-title">MECH<span class="slash">//</span>KEYS</h1>
+      <p class="intro-sub">
+        History, components, and culture behind mechanical keyboards — sourced from Wikipedia and the Das Keyboard blog.
+      </p>
+
+      <button class="space-bar" id="space-bar" aria-label="Start">
+        <span class="space-label">SPACE</span>
+        <span class="space-hint">↵</span>
+      </button>
+
+      <p class="intro-prompt">
+        Press <kbd>space bar</kbd> or <span class="click-word">click</span> to start
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ MAIN PAGE ============ -->
+  <section id="main-page" class="main-page hidden">
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+      <div class="nav-logo">MECH<span class="slash">//</span>KEYS</div>
+      <nav class="nav-keys" id="nav-keys">
+        <button class="key-btn" data-target="sec-intro">
+          <span class="key-top">INTRO</span>
+          <span class="key-sub">F1</span>
+        </button>
+        <button class="key-btn" data-target="sec-history">
+          <span class="key-top">HISTORY</span>
+          <span class="key-sub">F2</span>
+        </button>
+        <button class="key-btn" data-target="sec-parts">
+          <span class="key-top">PARTS</span>
+          <span class="key-sub">F3</span>
+        </button>
+        <button class="key-btn" data-target="sec-layouts">
+          <span class="key-top">LAYOUTS</span>
+          <span class="key-sub">F4</span>
+        </button>
+        <button class="key-btn" data-target="sec-sources">
+          <span class="key-top">SOURCES</span>
+          <span class="key-sub">F5</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- 1. INTRODUCTION -->
+      <article id="sec-intro" class="section active">
+        <div class="section-head">
+          <span class="section-tag">01 / INTRODUCTION</span>
+          <h2>More than a tool — a tactile design object.</h2>
+          <p class="section-kicker">What a mechanical keyboard is, and why people care.</p>
+        </div>
+
+        <div class="section-body two-col">
+          <div>
+            <p class="lead">
+              A mechanical keyboard uses an individual spring-loaded switch beneath every key,
+              rather than a single flexible membrane or rubber dome shared across the whole board.
+            </p>
+            <p>
+              Each press closes its own electrical contact, which is why mechanical keyboards feel
+              consistent across every key, last for tens of millions of keystrokes, and can report
+              many simultaneous presses — properties that matter to typists, programmers, and
+              gamers who depend on accuracy.
+            </p>
+            <p>
+              The Das Keyboard blog describes the result simply: a keyboard you can feel. The
+              tactile feedback, the audible response, and the ability to swap keycaps and switches
+              turn a commodity input device into something personal.
+            </p>
+          </div>
+          <aside class="card glow-card">
+            <h3 class="card-title-lg">Why they matter</h3>
+            <ul>
+              <li>Individual mechanical switches per key</li>
+              <li>Rated for tens of millions of presses</li>
+              <li>N-key rollover / anti-ghosting</li>
+              <li>Replaceable keycaps &amp; switches</li>
+              <li>Tactile &amp; audible typing feedback</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+
+      <!-- 2. HISTORY -->
+      <article id="sec-history" class="section">
+        <div class="section-head">
+          <span class="section-tag">02 / ORIGIN &amp; HISTORY</span>
+          <h2>From typewriters to custom builds.</h2>
+          <p class="section-kicker">A short timeline drawn from the Wikipedia article on keyboard technology.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1870s</div>
+            <div class="timeline-card">
+              <h3 class="card-title-md">The typewriter heritage</h3>
+              <p>
+                The QWERTY layout is introduced on the Sholes &amp; Glidden typewriter. The
+                physical lever-and-spring mechanism used to strike a ribbon is the ancestor of
+                every mechanical keyboard that follows.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1981 — 1985</div>
+            <div class="timeline-card">
+              <h3 class="card-title-md">IBM Model F &amp; Model M</h3>
+              <p>
+                IBM ships computer keyboards built around buckling-spring switches — the Model F
+                (1981) and later the widely loved Model M (1985). Both are still referenced as a
+                benchmark for tactile, long-life typing.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1983</div>
+            <div class="timeline-card">
+              <h3 class="card-title-md">Cherry introduces MX</h3>
+              <p>
+                The German company Cherry patents the MX switch family. Its cross-shaped stem
+                becomes the de-facto compatibility standard for keycaps and is still used by most
+                mechanical switches manufactured today.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">Late 1980s — 2000s</div>
+            <div class="timeline-card">
+              <h3 class="card-title-md">Alps, Topre, and the dome detour</h3>
+              <p>
+                Alps Electric switches appear in many early personal computers; Topre develops its
+                electrocapacitive switch in Japan. Meanwhile, consumer PCs shift almost entirely to
+                cheaper rubber-dome and membrane keyboards.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2010s</div>
+            <div class="timeline-card">
+              <h3 class="card-title-md">The enthusiast revival</h3>
+              <p>
+                Online communities reignite interest in mechanical switches. Das Keyboard and a
+                wave of gaming brands bring Cherry MX back to mainstream desks, while forums like
+                geekhack and r/MechanicalKeyboards grow a parallel custom-build culture.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <div class="timeline-card">
+              <h3 class="card-title-md">Hot-swap, optical, Hall effect</h3>
+              <p>
+                Hot-swap PCBs let users change switches without soldering. Optical and Hall-effect
+                switches replace metal contacts with light and magnetism — pushing mechanical
+                keyboards toward even longer life and per-key analog input.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. PARTS / COMPONENTS -->
+      <article id="sec-parts" class="section">
+        <div class="section-head">
+          <span class="section-tag">03 / KEY PARTS &amp; COMPONENTS</span>
+          <h2>A mechanical keyboard, exploded.</h2>
+          <p class="section-kicker">
+            Every board is a stack of layers. Below is how the Wikipedia article on keyboard
+            technology and Das Keyboard describe each one.
+          </p>
+        </div>
+
+        <div class="parts-grid">
+          <div class="card">
+            <div class="card-num">01</div>
+            <h3 class="card-title-md">Keycaps</h3>
+            <p>
+              The tops you touch. Most are molded from ABS or PBT plastic. Legends are printed,
+              laser-etched, doubleshot, or dye-sublimated. Profiles (OEM, Cherry, SA, DSA)
+              describe the shape of the cap.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-num">02</div>
+            <h3 class="card-title-md">Switches</h3>
+            <p>
+              The mechanism under each cap — a stem, housing, spring, and electrical contact.
+              Cherry MX, Kailh, Gateron, Alps, Topre, optical, and Hall-effect switches all take
+              different approaches to the same job.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-num">03</div>
+            <h3 class="card-title-md">Stabilizers</h3>
+            <p>
+              Wire-and-housing assemblies that keep wide keys — space, shift, enter, backspace —
+              level as you press. Lubed stabilizers are one of the biggest differences between a
+              stock board and a tuned one.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-num">04</div>
+            <h3 class="card-title-md">PCB</h3>
+            <p>
+              The printed circuit board. It registers each press and routes it over USB to your
+              computer. Hot-swap PCBs accept switches without soldering; soldered PCBs are the
+              traditional enthusiast format.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-num">05</div>
+            <h3 class="card-title-md">Plate</h3>
+            <p>
+              A rigid layer — steel, brass, aluminum, polycarbonate, or FR4 — that holds the
+              switches in place. Plate material is a major factor in how stiff the board feels and
+              how the typing acoustics resolve.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-num">06</div>
+            <h3 class="card-title-md">Case &amp; mounting</h3>
+            <p>
+              The shell that holds everything together. Tray-mount, top-mount, and gasket-mount
+              styles change how the plate flexes and how the board resonates — often the single
+              biggest contributor to how a build sounds.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. LAYOUTS + SWITCH TYPES -->
+      <article id="sec-layouts" class="section">
+        <div class="section-head">
+          <span class="section-tag">04 / LAYOUTS &amp; SWITCH VARIATIONS</span>
+          <h2>Pick a size. Pick a feel.</h2>
+          <p class="section-kicker">
+            Mechanical keyboards come in a range of sizes — trading keys for desk space — and a
+            range of switch types that change how a keystroke feels.
+          </p>
+        </div>
+
+        <h3 class="sub-heading">Common layouts</h3>
+        <div class="layouts-grid">
+          <div class="card layout-card">
+            <span class="layout-pct">100%</span>
+            <h4 class="card-title-sm">Full-Size</h4>
+            <p>Numpad, function row, arrow cluster. Everything, nothing omitted.</p>
+            <div class="layout-bar"><span style="width:100%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">~96%</span>
+            <h4 class="card-title-sm">1800 / 96%</h4>
+            <p>A compressed full-size — numpad kept, dead space removed.</p>
+            <div class="layout-bar"><span style="width:96%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">87%</span>
+            <h4 class="card-title-sm">TKL (Tenkeyless)</h4>
+            <p>Loses the numpad. A favorite balance of function and footprint.</p>
+            <div class="layout-bar"><span style="width:87%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">75%</span>
+            <h4 class="card-title-sm">75%</h4>
+            <p>Compact TKL — function row kept, everything tucked closer.</p>
+            <div class="layout-bar"><span style="width:75%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">65%</span>
+            <h4 class="card-title-sm">65%</h4>
+            <p>No function row, arrow keys kept. Popular entry to small boards.</p>
+            <div class="layout-bar"><span style="width:65%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">60%</span>
+            <h4 class="card-title-sm">60%</h4>
+            <p>Letters, numbers, modifiers. Everything else lives on a layer.</p>
+            <div class="layout-bar"><span style="width:60%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">40%</span>
+            <h4 class="card-title-sm">40%</h4>
+            <p>Letters only. A layered, minimalist experience — and a challenge.</p>
+            <div class="layout-bar"><span style="width:40%"></span></div>
+          </div>
+          <div class="card layout-card">
+            <span class="layout-pct">ERGO</span>
+            <h4 class="card-title-sm">Split / Ortholinear</h4>
+            <p>Grid or split-half layouts designed for wrist comfort.</p>
+            <div class="layout-bar"><span style="width:55%"></span></div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Switch types</h3>
+        <p class="section-kicker">
+          The switch under a key defines its feel. Wikipedia groups modern mechanical switches into
+          three broad families, plus several non-contact designs.
+        </p>
+
+        <div class="switch-grid">
+          <div class="card switch-card switch-linear">
+            <span class="switch-tag">LINEAR</span>
+            <h4 class="card-title-md">Smooth top-to-bottom</h4>
+            <p>
+              No tactile bump, no click. A straight downward motion. Examples: Cherry MX Red,
+              Cherry MX Black, Gateron Yellow. Common for gaming.
+            </p>
+          </div>
+          <div class="card switch-card switch-tactile">
+            <span class="switch-tag">TACTILE</span>
+            <h4 class="card-title-md">Bump at actuation</h4>
+            <p>
+              A small bump mid-press tells your finger the key has registered. Examples: Cherry MX
+              Brown, Cherry MX Clear. A typing-friendly default.
+            </p>
+          </div>
+          <div class="card switch-card switch-clicky">
+            <span class="switch-tag">CLICKY</span>
+            <h4 class="card-title-md">Bump + audible click</h4>
+            <p>
+              Tactile bump paired with a distinct click. Examples: Cherry MX Blue, Cherry MX Green.
+              The loudest, most typewriter-like choice.
+            </p>
+          </div>
+          <div class="card switch-card switch-special">
+            <span class="switch-tag">SPECIAL</span>
+            <h4 class="card-title-md">Buckling spring, Topre, optical, Hall effect</h4>
+            <p>
+              Non-MX designs with their own character — IBM's buckling spring, Topre's
+              electrocapacitive dome, plus light- and magnet-based switches now used in high-end
+              boards.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. SOURCES -->
+      <article id="sec-sources" class="section">
+        <div class="section-head">
+          <span class="section-tag">05 / SOURCES</span>
+          <h2>Where this came from.</h2>
+          <p class="section-kicker">All content on this site is drawn from the two sources below.</p>
+        </div>
+
+        <ul class="sources-list">
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Keyboard_technology" target="_blank" rel="noopener">
+              Wikipedia — Keyboard technology
+            </a>
+            <span>
+              Primary reference for switch families, history, components, and layout terminology.
+            </span>
+          </li>
+          <li>
+            <a href="https://www.daskeyboard.com/blog/" target="_blank" rel="noopener">
+              Das Keyboard — Blog
+            </a>
+            <span>
+              Reference for the typing experience, the case for mechanical over membrane, and the
+              modern mechanical-keyboard culture.
+            </span>
+          </li>
+        </ul>
+        <p class="footer-note">Built as an informational project · MECH//KEYS</p>
+      </article>
+
+    </main>
+  </section>
+
+  <!-- ============ SCRIPT ============ -->
+  <script>
+    /* ---------- Intro → Main transition ---------- */
+    const intro = document.getElementById('intro-page');
+    const main  = document.getElementById('main-page');
+    const spaceBar = document.getElementById('space-bar');
+
+    function startSite() {
+      if (!intro.classList.contains('hidden')) {
+        spaceBar.classList.add('pressed');
+        setTimeout(() => {
+          intro.classList.add('hidden');
+          main.classList.remove('hidden');
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        }, 220);
+      }
+    }
+
+    spaceBar.addEventListener('click', startSite);
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && !intro.classList.contains('hidden')) {
+        e.preventDefault();
+        startSite();
+      }
+    });
+
+    /* ---------- Nav key behavior (no sound) ---------- */
+    const keyBtns = document.querySelectorAll('#nav-keys .key-btn');
+    const sections = document.querySelectorAll('.section');
+
+    keyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('pressed');
+        setTimeout(() => btn.classList.remove('pressed'), 150);
+
+        const target = btn.getAttribute('data-target');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+
+        keyBtns.forEach(b => b.classList.remove('is-current'));
+        btn.classList.add('is-current');
+
+        document.querySelector('.content').scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    if (keyBtns[0]) keyBtns[0].classList.add('is-current');
+
+    /* ---------- F-key shortcuts ---------- */
+    document.addEventListener('keydown', (e) => {
+      if (intro.classList.contains('hidden')) {
+        const map = { F1:'sec-intro', F2:'sec-history', F3:'sec-parts', F4:'sec-layouts', F5:'sec-sources' };
+        if (map[e.key]) {
+          e.preventDefault();
+          const btn = document.querySelector(`.key-btn[data-target="${map[e.key]}"]`);
+          if (btn) btn.click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

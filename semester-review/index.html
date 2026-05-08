@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santiago Rivera — Portfolio</title>
+
+  <!-- Teachers font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- animated mesh gradient sits behind everything -->
+  <div class="mesh-bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+    <span class="blob blob-5"></span>
+  </div>
+
+  <!-- full-page wipe layer for the click transition -->
+  <div class="wipe-overlay" aria-hidden="true"></div>
+
+  <main class="container">
+
+    <header class="hero">
+      <h1>Santiago Rivera</h1>
+      <h2>Interaction Foundations – Spring 2026</h2>
+    </header>
+
+    <!-- three project cards -->
+    <section class="projects">
+
+      <a class="project-card"
+         href="https://santiagoriverawu.github.io/ifspring2026/recipe/complete/index.html"
+         target="_blank" rel="noopener">
+        <div class="card-img">
+          <img src="images/cochinita-pibil.jpg" alt="Cochinita Pibil recipe page preview">
+        </div>
+        <h3>Recipe Page</h3>
+        <h4>Individual Project</h4>
+      </a>
+
+      <a class="project-card"
+         href="https://santiagoriverawu.github.io/ifspring2026/microsite/final/index.html"
+         target="_blank" rel="noopener">
+        <div class="card-img">
+          <img src="images/mech-keys.jpg" alt="Mech//Keys microsite preview">
+        </div>
+        <h3>Microsite: Mechanical Keyboards</h3>
+        <h4>Designer &amp; Developer</h4>
+      </a>
+
+      <a class="project-card"
+         href="https://imemilyhuang.github.io/ifspring2026/microsite/final/index.html#hero"
+         target="_blank" rel="noopener">
+        <div class="card-img">
+          <img src="images/star-wars.jpg" alt="Star Wars microsite preview">
+        </div>
+        <h3>Microsite: Star Wars</h3>
+        <h4>Creative Director</h4>
+      </a>
+
+    </section>
+
+    <footer class="footer">
+      <p class="footer-line">
+        <span>&copy; 2026&nbsp; -&nbsp; Santiago Rivera&nbsp; -&nbsp; rivera.s.f@wustl.edu&nbsp; -&nbsp;</span>
+
+        <!-- github -->
+        <a href="https://github.com/SantiagoRiveraWU/ifspring2026"
+           target="_blank" rel="noopener" aria-label="GitHub" class="icon-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.04 11.04 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+        </a>
+
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/santiago-f-rivera/"
+           target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    // wipe-then-fade transition on card click
+    const overlay = document.querySelector('.wipe-overlay');
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = card.getAttribute('href');
+
+        // slide the overlay up to cover the page
+        overlay.classList.add('wiping');
+
+        // once it's covering, pop the project open in a new tab
+        setTimeout(() => {
+          window.open(url, '_blank', 'noopener');
+        }, 750);
+
+        // fade the overlay away so the portfolio is visible again
+        setTimeout(() => {
+          overlay.classList.add('fading');
+        }, 1100);
+
+        // reset for next click
+        setTimeout(() => {
+          overlay.classList.remove('wiping', 'fading');
+        }, 2300);
+      });
+    });
+  </script>
+
+</body>
+</html>
